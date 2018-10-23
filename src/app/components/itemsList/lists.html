@@ -1,0 +1,29 @@
+<main>
+	<section>
+		<div class="background">
+			<div><input class="form-control" ng-model="searchText" placeholder="Найти" /></div>
+			<!-- 				<div class="form-group">
+					<div class="col-md-offset-2 col-md-8"><button class="btn btn-default" ng-click="searchItem(search)">Поиск</button></div>
+				</div>
+ -->
+			<div class="form-group">
+				<div><input class="form-control" ng-model="text" placeholder="Название" /></div>
+				<div><input type="number" class="form-control" ng-model="price" placeholder="Цена" /></div>
+				<div><button class="btn btn-default" ng-click="addItem(text, price)">Добавить</button></div>
+			</div>
+		</div>
+
+	</section>
+
+	<div class="item">
+		<div>Название</div>
+		<div>Цена</div>
+		<div>Рейтинг</div>
+		<div>Дата проведения</div>
+	</div>
+
+	<div ng-repeat="item in lists | filterSearchElement:searchText">
+		<item-component date-border view="item"></item-component>
+	</div>
+	<div ng-if="lists.length === 0"><p style="font-family: 'Roboto', Helvetica, Arial, sans-serif;" class="title">Нет данных. Будь первым...</p></div>
+</main>

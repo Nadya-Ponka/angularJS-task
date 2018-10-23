@@ -1,0 +1,225 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: "Quicksand-Bold";
+	src: url("../fonts/Quicksand-Bold.ttf");
+}
+
+@font-face {
+	font-family: "quicksand-bold-webfont";
+	src: url("../fonts/quicksand-bold-webfont.woff");
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	background-color: white;
+}
+
+body {
+	width: 100%;
+	margin: 0 auto;
+	font-family: quicksand-bold-webfont;
+	font-size: 18px;
+}
+
+section {
+	width: 100%;
+	border-bottom: 5px solid white;
+}
+
+.wrapper {
+	max-width: 1085px;
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 100%;
+}
+
+main {
+	background-color: #f2f2f2;
+	padding: 0 25px 25px 25px;
+	margin: 10px 0;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	font-family: quicksand-bold-webfont;
+
+}
+
+header {
+	text-align: center;
+	margin-top: 20px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button {
+	background: 0 0;
+	border: none;
+	border-radius: 2px;
+	color: #aa9b77;
+	position: relative;
+	height: 36px;
+	margin: 0;
+	min-width: 64px;
+	padding: 0 16px;
+	display: inline-block;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	overflow: hidden;
+	will-change: box-shadow;
+	transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	line-height: 36px;
+	vertical-align: middle;
+}
+
+h1 {
+	text-transform: uppercase;
+	display: inline-block;
+	align-self: center;
+	margin-left: 25px;
+}
+
+h2 {
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+	text-transform: uppercase;
+
+}
+
+.checked {
+	color: orange;
+}
+
+/* button:hover {
+  background-color: rgba(158, 158, 158, .2);
+}
+
+button:active {
+  background-color: rgba(158, 158, 158, .4);
+} */
+
+.form-group {
+	display: flex;
+	align-items: center;
+}
+
+item-component,
+.item {
+	width: 1040px;
+	display: grid;
+	grid-template-columns: repeat(4, 24%);
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	justify-content: center;
+	padding: 10px 0;
+	border: solid 2px grey;
+	margin-bottom: 10px;
+}
+
+.item {
+	margin-top: 25px;
+	font-weight: bold;
+	color: white;
+	background-color: grey;
+}
+
+/* .cell {
+width:24%;
+padding: 3px 20px;
+} */
+
+button.icon {
+	border-radius: 50%;
+	font-size: 24px;
+	height: 32px;
+	margin-left: 0;
+	margin-right: 0;
+	min-width: 32px;
+	width: 32px;
+	padding: 0;
+	overflow: hidden;
+	line-height: normal;
+}
+
+button.icon .material-icons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-12px, -12px);
+	transform: translate(-12px, -12px);
+	line-height: 24px;
+	width: 24px;
+	vertical-align: middle;
+}
+
+/* Todo form */
+/* .todo-form {
+  display: flex;
+  padding: 1em;
+  margin-bottom: 1em;
+} */
+/* 
+.todo-form button {
+  margin-left: 16px;
+} */
+
+.background {
+	background-color: #f5f6f7;
+	padding: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+/* Todo list */
+.todo-list {
+	display: flex;
+	margin: 20px auto 5px;
+	min-width: max-content;
+	align-items: center;
+	height: 145px;
+}
+
+.todo-item {
+	padding-right: 1em;
+	display: inline-block;
+	min-width: max-content;
+}
+
+.todo-item .checkbox {
+	margin-right: .25em;
+}
+
+.todo-item.completed .material-icons {
+	color: #aa9b77;
+}
+
+.back-button {
+	font-family: "quicksand-bold-webfont";
+	color: black;
+	background-color: #f5f6f7;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+.back-button:hover {
+	background-color: #ccc;
+}
