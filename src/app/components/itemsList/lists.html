@@ -2,7 +2,7 @@
 	<section>
 		<div class="background">
 			<div><input class="form-control" ng-model="searchText" placeholder="Найти" /></div>
-			<!-- 				<div class="form-group">
+<!-- 				<div class="form-group">
 					<div class="col-md-offset-2 col-md-8"><button class="btn btn-default" ng-click="searchItem(search)">Поиск</button></div>
 				</div>
  -->
@@ -23,7 +23,9 @@
 	</div>
 
 	<div ng-repeat="item in lists | filterSearchElement:searchText">
-		<item-component date-border view="item"></item-component>
+		<item-component date-border view="item" ng-click="goToItem(item)"></item-component>
 	</div>
-	<div ng-if="lists.length === 0"><p style="font-family: 'Roboto', Helvetica, Arial, sans-serif;" class="title">Нет данных. Будь первым...</p></div>
+	<div ng-if="lists.length === 0">
+		<p style="font-family: 'Roboto', Helvetica, Arial, sans-serif;" class="title">Нет данных. Будь первым...</p>
+	</div>
 </main>

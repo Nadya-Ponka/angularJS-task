@@ -1,7 +1,5 @@
-import angular from 'angular';
-import uirouter from 'angular-ui-router';
-
-import routes from './lists.routers.js';
+/* import angular from 'angular';
+ */
 import template from './lists.html';
 import myController from './lists.controller';
 

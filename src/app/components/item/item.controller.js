@@ -1,3 +1,3 @@
 export default function itemController($scope) {
-	console.log($scope.data);
+	console.log(this);
 }

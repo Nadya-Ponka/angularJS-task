@@ -140,6 +140,9 @@ item-component,
 	background-color: grey;
 }
 
+item-component:hover {
+	background-color: #FEF9E7;
+}
 /* .cell {
 width:24%;
 padding: 3px 20px;
