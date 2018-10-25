@@ -1,3 +1,6 @@
 export default function itemController($scope) {
-	console.log(this);
+	$scope.changeStar = function (event, elem) {
+		event.stopPropagation();
+		elem.star = !elem.star;
+	}
 }

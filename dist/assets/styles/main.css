@@ -15,7 +15,6 @@
 
 html {
 	width: 100%;
-	background-color: white;
 }
 
 body {
@@ -38,8 +37,6 @@ section {
 }
 
 main {
-	background-color: #f2f2f2;
-	padding: 0 25px 25px 25px;
 	margin: 10px 0;
 	width: 100%;
 	display: flex;
@@ -47,7 +44,6 @@ main {
 	align-items: center;
 	flex-direction: column;
 	font-family: quicksand-bold-webfont;
-
 }
 
 header {
@@ -55,37 +51,33 @@ header {
 	margin-top: 20px;
 }
 
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
 button {
-	background: 0 0;
+	background: orange;
 	border: none;
 	border-radius: 2px;
-	color: #aa9b77;
-	position: relative;
 	height: 36px;
 	margin: 0;
-	min-width: 64px;
+	min-width: 150px;
 	padding: 0 16px;
 	display: inline-block;
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0;
-	overflow: hidden;
-	will-change: box-shadow;
-	transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
 	outline: none;
 	cursor: pointer;
-	text-decoration: none;
 	text-align: center;
-	line-height: 36px;
-	vertical-align: middle;
+}
+
+.form-control {
+	padding: 0 16px;
+	display: inline-block;
+	height: 36px;
+	border-radius: 2px;
+	border: .5px solid;
+	outline: none;
+	margin-right: 20px;
 }
 
 h1 {
@@ -101,17 +93,17 @@ h2 {
 	text-align: center;
 	width: 100%;
 	text-transform: uppercase;
-
 }
 
 .checked {
 	color: orange;
 }
 
-/* button:hover {
-  background-color: rgba(158, 158, 158, .2);
+button:hover {
+	background-color: grey;
 }
 
+/* 
 button:active {
   background-color: rgba(158, 158, 158, .4);
 } */
@@ -119,6 +111,8 @@ button:active {
 .form-group {
 	display: flex;
 	align-items: center;
+	margin-top: 25px;
+	justify-content: center;
 }
 
 item-component,
@@ -143,34 +137,11 @@ item-component,
 item-component:hover {
 	background-color: #FEF9E7;
 }
+
 /* .cell {
 width:24%;
 padding: 3px 20px;
 } */
-
-button.icon {
-	border-radius: 50%;
-	font-size: 24px;
-	height: 32px;
-	margin-left: 0;
-	margin-right: 0;
-	min-width: 32px;
-	width: 32px;
-	padding: 0;
-	overflow: hidden;
-	line-height: normal;
-}
-
-button.icon .material-icons {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-12px, -12px);
-	transform: translate(-12px, -12px);
-	line-height: 24px;
-	width: 24px;
-	vertical-align: middle;
-}
 
 /* Todo form */
 /* .todo-form {
@@ -184,12 +155,12 @@ button.icon .material-icons {
 } */
 
 .background {
-	background-color: #f5f6f7;
+	background-color: rgba(158, 158, 158, .2);
 	padding: 25px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
+	margin-top: 25px;
 }
 
 /* Todo list */

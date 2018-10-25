@@ -1,4 +1,4 @@
 <div>{{$ctrl.view.name | uppercase}}</div>
 <div>{{$ctrl.view.price | currency}}</div>
-<div><span class="fa fa-star" ng-class="{'checked': $ctrl.view.star}"></span></div>
+<div><span class="fa fa-star" ng-class="{'checked': $ctrl.view.star}" ng-click="changeStar($event, $ctrl.view)"></span></div>
 <div>{{$ctrl.view.date | date}}</div>
