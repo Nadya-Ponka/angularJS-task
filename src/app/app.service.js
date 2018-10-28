@@ -12,6 +12,12 @@ export default function appService($http, $q) {
 				deferred.reject(response.status);
 			});
 			return deferred.promise;
+		},
+
+		sendData: function (dataForm) {
+			console.log("posting data....");
+			console.log(dataForm);
+			//$http.post('form.php', JSON.stringify(data)).success(function(){/*success callback*/});
 		}
 	}
 }

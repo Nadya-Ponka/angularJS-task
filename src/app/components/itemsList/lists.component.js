@@ -1,5 +1,3 @@
-/* import angular from 'angular';
- */
 import template from './lists.html';
 import myController from './lists.controller';
 

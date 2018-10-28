@@ -9,6 +9,6 @@ export default function myController($scope,  $location) {
 	}
 
 	$scope.goToForm = function() {
-		$location.path(`/form`);
+		$location.path('/form');
 	}
 }

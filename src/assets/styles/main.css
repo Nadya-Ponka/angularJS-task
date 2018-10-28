@@ -138,7 +138,8 @@ item-component:hover {
 	background-color: #FEF9E7;
 }
 
-/* .cell {
+/* .ng-invalid.ng-touched, .ng-submitted .ng-invalid {background-color: red;}
+ *//* .cell {
 width:24%;
 padding: 3px 20px;
 } */

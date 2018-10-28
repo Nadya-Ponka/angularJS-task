@@ -1,5 +1,5 @@
 export default function dateBorder() {
-	return function (scope, elementDOM, attributes) {
+	return function (scope, elementDOM, attributes, controller) {
 		const TWOWEEK = 86400000 * 14;
 
 		let currentDate = new Date();
