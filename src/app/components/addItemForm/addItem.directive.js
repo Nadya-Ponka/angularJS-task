@@ -7,9 +7,7 @@ export default function minmaxDate() {
 		require: 'ngModel',
 		link: (scope, element, attrs, controller) => {
 			controller.$validators.forbiddenDate = (date) => {
-				let bool = (new Date(date).valueOf() > CURRENTDATE - ONEYEAR && new Date(date).valueOf() < CURRENTDATE + ONEYEAR);
-				console.log(bool);
-				return bool;
+				return (new Date(date).valueOf() > CURRENTDATE - ONEYEAR && new Date(date).valueOf() < CURRENTDATE + ONEYEAR);
 			};
 		}
 	}

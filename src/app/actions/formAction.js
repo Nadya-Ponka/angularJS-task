@@ -1,14 +1,8 @@
-export function updateName(name) {
+export function addItem(item) {
 	return {
-			type: 'UPDATE_NAME',
-			name
-	}
-}
-export function updateDate(date) {
-	return {
-			type: 'UPDATE_DATE',
-			date
+			type: 'ADD_ITEM',
+			item
 	}
 }
 
-export default { updateName, updateDate };
+export default { addItem };

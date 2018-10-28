@@ -2,7 +2,7 @@
 	<div>
 		<h2>Форма для создания нового элемента</h2>
 	</div>
-	<form class="form-group"  name="newItemForm" > <!-- ng-submit="newItemForm.$valid && newItemForm.submit() -->
+	<form class="form-group"  name="newItemForm" >
 		<div><input class="form-control" ng-model="text" placeholder="Название" required /></div>
 		<div><input type="number" class="form-control" ng-model="price" placeholder="Цена" required /></div>
 		<div>
@@ -13,12 +13,6 @@
 				</ng-messages>	
 			</md-input-container>
 		</div>
-		<div><button type="submit" ng-click="submit(text, price, input, newItemForm)">Добавить</button></div>
+		<div><button type="submit" ng-click="submit(text, price, input)">Добавить</button></div>
 </div>
 </form>
-
-<!-- ng-pattern="/\d\d.\d\d.\d\d\d\d/" 
-	min="2017-10-01" max="2019-10-01"
-	ng-class="{'has-error': $ctrl.newItemForm.input.$invalid && ($ctrl.newItemForm.input.$touched || $ctrl.newItemForm.$submitted)}"
-ng-click="addItem(text, price, input)" 
--->

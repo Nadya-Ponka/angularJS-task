@@ -12,20 +12,35 @@ import dateBorder from './components/itemsList/lists.directive';
 import itemPageController from './components/itemPage/itemPage.controller';
 import appService from './app.service';
 import mainController from './app.controller';
-import routes from './app.routes';
 import addItemComponent from './components/addItemForm/addItem.component';
 import addItemController from './components/addItemForm/addItem.controller';
 import minmaxDate from './components/addItemForm/addItem.directive';
-/* import reducer from './reducers/formReducer';
- */
-routes.$inject = ['$routeProvider'];
+import reducer from './reducers/formReducer';
 
-/* const store = createStore(reducer, applyMiddleware(createLogger()));
- */
+import template from './components/itemPage/itemPage.html';
+import templateForm from './components/addItemForm/addItem.html';
+
+const store = createStore(reducer, applyMiddleware(createLogger()));
+
 var app = angular.module('myApp', [ngRoute, ngRedux])
-	.config(routes/* , ($locationProvider, $stateProvider, $ngReduxProvider) => {
+	.config(($routeProvider, $locationProvider, $ngReduxProvider) => {
+		$routeProvider.when('/item/:id', {
+			template: `${template}`,
+			controller: 'itemPageController'
+		});
+		$routeProvider.when('/', {
+			template: '<list-component></list-component><br/><br/><h2>Получение данных со стороннего API с помощью сервиса через $http:</h2><div ng-controller="mainController"><span ng-repeat="elem in question">{{elem.Name}}, </span></div>',
+			controller: 'mainController'
+	
+		});
+		$routeProvider.when('/form', {
+			template: `${templateForm}`,
+			controller: 'addItemController'
+		});
+		$routeProvider.otherwise('/');
+		
 		$ngReduxProvider.provideStore(store);
-	} */)
+	})
 	.service('appService', appService)
 	.controller('mainController', mainController)
 	.controller('itemPageController', itemPageController)

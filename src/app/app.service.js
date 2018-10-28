@@ -14,9 +14,9 @@ export default function appService($http, $q) {
 			return deferred.promise;
 		},
 
-		sendData: function (dataForm) {
+		sendData: function (text, price, day) {
 			console.log("posting data....");
-			console.log(dataForm);
+			console.log(text, price, day);
 			//$http.post('form.php', JSON.stringify(data)).success(function(){/*success callback*/});
 		}
 	}

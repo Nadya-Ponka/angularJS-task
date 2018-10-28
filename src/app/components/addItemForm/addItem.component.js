@@ -4,7 +4,6 @@ import addItemController from './addItem.controller';
 export default class addItemComponent {
 	constructor() {
 		this.controller = addItemController;
-/* 		this.controllerAs = 'formCtrl';
- */		this.template = `${template}`;
+		this.template = `${template}`;
 	}
 }

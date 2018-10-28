@@ -1,11 +1,13 @@
-export default function form(state = {date: false}, action) {
+import lists from './../../assets/data.ts';
+
+export default function form(state = {	lists: lists }, action) {
 	switch (action.type) {
-			case 'UPDATE_NAME':
-			console.log(state);
-					return {...state, name: action.name};
-			case 'UPDATE_DATE':
-					return {...state, date: action.date};
-			default:
-					return state;
+		case 'ADD_ITEM':
+			console.log("state.lists", state.lists);
+			return { ...state,
+				lists: action.lists
+			};
+		default:
+			return state;
 	}
 }
